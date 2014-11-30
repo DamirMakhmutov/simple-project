@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'dashboard#index'
+  
+  root to: 'posts#index'
+
+  resources :posts
 end
