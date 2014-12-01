@@ -11,9 +11,9 @@ class PostsController < ApplicationController
   end
 
   def create
-  	post.save
+    post.save
 
-  	respond_with post
+    respond_with post
   end
 
   def update
@@ -25,7 +25,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-  	params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:title, :text)
   end
-
 end
