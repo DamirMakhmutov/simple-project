@@ -1,7 +1,8 @@
 .content
-  = link_to 'create new post', new_post_path
+  - if current_user.present?
+    = link_to 'create new post', new_post_path
   br
-  
+
   - if posts.present?
     - posts.each do |post|
       = render post

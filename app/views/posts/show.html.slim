@@ -1,7 +1,9 @@
 .content
-  = post.title
+  = show_post.title
   br
-  = post.text
+  = show_post.text
   br
   = link_to 'back to posts', posts_path
-  = link_to 'edit', edit_post_path(post)
+
+  - if show_post.owner?
+    = link_to 'edit', edit_post_path(post)
