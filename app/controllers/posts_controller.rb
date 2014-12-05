@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   expose(:posts)
   expose(:post, attributes: :post_params)
   expose(:show_post) { PostPresenter.new(post, current_user) }
-  load_and_authorize_resource only: [:create, :update]
+  load_and_authorize_resource only: %i(create update)
 
   respond_to :html
 
