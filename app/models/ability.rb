@@ -5,6 +5,10 @@ class Ability
     user ||= User.new # guest user (not logged in)
 
     can :read, :all
-    can :manage, Post, user_id: user.id if user.persisted?
+
+    return unless user.persisted?
+
+    can :manage, Post, user_id: user.id
+    can :create, Comment
   end
 end
