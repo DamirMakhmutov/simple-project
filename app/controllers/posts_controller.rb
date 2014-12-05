@@ -1,25 +1,25 @@
 class PostsController < ApplicationController
-  expose(:posts)
-  expose(:post, attributes: :post_params)
-  expose(:show_post) { PostPresenter.new(post, current_user) }
-  load_and_authorize_resource only: %i(create update)
+  load_and_authorize_resource
 
   respond_to :html
 
   def index
+    respond_with @post
   end
 
   def show
+    @post = PostPresenter.new(@post, current_user)
+    respond_with @post
   end
 
   def create
-    post.save
-    respond_with post
+    @post.save
+    respond_with @post
   end
 
   def update
-    post.save
-    respond_with post
+    @post.update_attributes(post_params)
+    respond_with @post
   end
 
   private
@@ -28,6 +28,5 @@ class PostsController < ApplicationController
     params
       .require(:post)
       .permit(:title, :text)
-      .merge(user_id: current_user.try(:id))
   end
 end
