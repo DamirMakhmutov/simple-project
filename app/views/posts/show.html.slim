@@ -5,5 +5,10 @@
   br
   = link_to 'back to posts', posts_path
 
+  - if current_user.present?
+    = render 'comments/form', post: @post.object, comment: @comment
+
+    = render @comments
+
   - if @post.owner?
     = link_to 'edit', edit_post_path

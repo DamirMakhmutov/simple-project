@@ -8,6 +8,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comments = @post.comments.includes(:user)
+    @comment =  @comments.build
     @post = PostPresenter.new(@post, current_user)
     respond_with @post
   end

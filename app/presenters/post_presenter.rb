@@ -1,4 +1,7 @@
 class PostPresenter
+  attr_reader :post
+  alias_method :object, :post
+
   def initialize(post, current_user)
     @post = post
     @current_user = current_user
