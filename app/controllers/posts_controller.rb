@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   load_and_authorize_resource
+  before_action(:set_comments, only: :show)
 
   respond_to :html
 
@@ -8,9 +9,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @comments = @post.comments.includes(:user)
-    @comment =  @comments.build
-    @post = PostPresenter.new(@post, current_user)
     respond_with @post
   end
 
@@ -25,6 +23,11 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def set_comments
+    @comments = @post.comments.includes(:user)
+    @comment =  @comments.build
+  end
 
   def post_params
     params
