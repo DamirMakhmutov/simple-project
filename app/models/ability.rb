@@ -9,6 +9,6 @@ class Ability
     return unless user.persisted?
 
     can :manage, Post, user_id: user.id
-    can :create, Comment
+    can :create, Comment, user_id: user.id
   end
 end

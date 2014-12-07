@@ -23,9 +23,9 @@ en:
   hello: "Hello world"
 
   titles:
-    application: Rails Base example site
+    application: Simple site
     dashboard:
-      index: Dashboard
+      index: Post
     devise:
       registrations:
         new: Sign up
@@ -78,11 +78,11 @@ en:
       update: "Update"
       sure: "Are you sure?"
 
-    home: 'Dashboard'
+    home: 'Post'
 
     navigation:
       main:
-        dashboard: 'Dashboard'
+        dashboard: 'Post'
       user:
         sign_in: 'Sign in'
         sign_out: 'Sign out'

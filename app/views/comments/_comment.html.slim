@@ -1,4 +1,6 @@
-br
-= comment.full_name
-br
-= comment.text
+li
+  .commenter-author
+    = comment.user_full_name
+
+  .comment-text
+    = comment.text

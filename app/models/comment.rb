@@ -3,5 +3,5 @@ class Comment < ActiveRecord::Base
   belongs_to :user
 
   validates :text, presence: true, length: { minimum: 2 }
-  delegate :full_name, to: :user, allow_nil: true
+  delegate :full_name, to: :user, allow_nil: true, prefix: true
 end

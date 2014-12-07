@@ -20,7 +20,14 @@ ul.links {
   font-size: 0.85rem
 }
 
-.content {
-  width: 60%;
+.layout-center-wrapper {
   margin: 0 auto;
+  width: 60%;
+  padding: 0;
+}
+
+.clearfix:after {
+    content:'';
+    display:table;
+    clear:both;
 }
