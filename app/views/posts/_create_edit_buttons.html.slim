@@ -1,6 +1,6 @@
-- if current_user.present?
-  .layout-center-wrapper.clearfix
-    .top-actions
+.layout-center-wrapper.clearfix
+  .top-actions
+    - if current_user.present?
       - if @post.try(:user_id) == current_user.try(:id)
         = link_to 'edit', edit_post_path, class: 'btn'
 

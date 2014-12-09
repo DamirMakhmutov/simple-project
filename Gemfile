@@ -44,7 +44,7 @@ group :test do
   gem 'email_spec'
   gem 'formulaic'
   gem 'launchy'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '~> 2.7.0'
   gem 'site_prism'
   gem 'webmock', require: false
 end
