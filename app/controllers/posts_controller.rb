@@ -1,14 +1,15 @@
 class PostsController < ApplicationController
+  before_action(:set_posts, only: :index)
   load_and_authorize_resource
-  before_action(:set_comments, only: :show)
 
   respond_to :html
 
   def index
-    respond_with @post
+    respond_with @posts
   end
 
   def show
+    set_comments
     respond_with @post
   end
 
@@ -27,6 +28,10 @@ class PostsController < ApplicationController
   def set_comments
     @comments = @post.comments.includes(:user)
     @comment =  @comments.build
+  end
+
+  def set_posts
+    @posts = Post.includes :user
   end
 
   def post_params

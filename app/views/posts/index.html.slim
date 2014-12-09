@@ -1,10 +1,9 @@
-.content
-  - if current_user.present?
-    = link_to 'create new post', new_post_path
-  br
+= render 'posts/create_edit_buttons'
 
+.layout-center-wrapper
   - if @posts.present?
-    - @posts.each do |post|
-      = render post
+    ul.post-list
+      - @posts.each do |post|
+        li = render post
   - else
     | No matches found.

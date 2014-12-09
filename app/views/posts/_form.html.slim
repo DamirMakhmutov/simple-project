@@ -1,4 +1,9 @@
 = simple_form_for @post do |f|
-  = f.input :title
-  = f.input :text
-  = f.submit
+  fieldset
+    legend New post
+    .row
+      = f.input :title, placeholder: 'add some title'
+    .row
+      = f.input :text, placeholder: 'add some text', input_html: { rows: 25 }
+    .row
+      = f.button :submit, class: 'btn'

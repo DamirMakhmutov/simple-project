@@ -1,6 +1,4 @@
-= post.title
-br
-= post.text
-br
-= link_to 'show more', post_path(post)
-br 
+h1.post-title
+  = link_to post.title, post_path(post)
+
+= render 'posts/description', post: post
