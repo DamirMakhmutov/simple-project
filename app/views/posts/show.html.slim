@@ -1,18 +1,22 @@
-= render 'posts/create_edit_buttons'
-
 .layout-center-wrapper
   h1.post-title
-    = @post.title
+    = post.title
 
-  = render 'posts/description', post: @post
+  = render 'posts/description', post: post
 
   .post-body
-    = @post.text
+    = post.text
 
   - if current_user.present?
-    = render 'comments/form', post: @post, comment: @comment
+    = render 'comments/form', post: post, comment: comment
   - else
-    | Please sign in or sign up to add comments
+    ' Please
+    = link_to new_user_session_path do
+      ' sign in
+    ' or
+    = link_to new_user_registration_path do
+      ' sign up
+    | to add comments
 
   ul.comments-list
-    = render @comments
+    = render comments

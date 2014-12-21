@@ -1,0 +1,19 @@
+.layout-center-wrapper.clearfix
+  .top-actions
+    = link_to 'edit', edit_user_post_path(post.id), class: 'btn'
+
+    .btn.btn-new
+      = link_to 'create new post', new_user_post_path
+
+
+.layout-center-wrapper
+  h1.post-title
+    = post.title
+
+  = render 'posts/description', post: post
+
+  .post-body
+    = post.text
+
+  ul.comments-list
+    = render comments

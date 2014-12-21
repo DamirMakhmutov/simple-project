@@ -31,7 +31,7 @@ gem 'kaminari'
 gem 'rollbar', '~> 0.10.3'
 gem 'seedbank'
 gem 'thin'
-gem 'cancancan', '~> 1.9'
+gem 'sanitize'
 
 group :staging, :production do
   gem 'rails_12factor'

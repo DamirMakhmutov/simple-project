@@ -1,5 +1,5 @@
 h3 Add a comment
 
-= simple_form_for [post, comment] do |f|
+= simple_form_for [post.post, comment] do |f|
   = f.input :text, placeholder: 'add some comment'
   = f.button :submit, 'Add comment'
