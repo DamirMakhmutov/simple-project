@@ -1,11 +1,12 @@
 .layout-center-wrapper
-  h1.post-title
-    = post.title
+  .post
+    h1.post-title
+      = post.title
 
-  = render 'posts/description', post: post
+    = render 'posts/description', post: post
 
-  .post-body
-    = post.text
+    .post-body
+      = post.text
 
   - if current_user.present?
     = render 'comments/form', post: post, comment: comment
