@@ -2,4 +2,4 @@ ul.left
   = active_link_to t('app.navigation.main.post'), root_path, active: :exclusive, wrap_tag: :li
 
   - if user_signed_in?
-    = active_link_to 'My posts', user_posts_path, active: :exclusive, wrap_tag: :li
+    = active_link_to t('app.navigation.main.my'), user_posts_path, active: :exclusive, wrap_tag: :li

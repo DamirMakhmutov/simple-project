@@ -2,7 +2,7 @@ class UserPostsController < ApplicationController
   before_action :authenticate_user!
 
   expose(:posts, ancestor: :current_user)
-  expose(:post, attributes: :post_params) { |d| PostPresenter.wrap(d)}
+  expose(:post, attributes: :post_params) { |d| PostPresenter.wrap(d) }
   expose(:comments, ancestor: :post) { |d| d.includes(:user) }
   expose(:comment) { comments.build }
 
@@ -36,5 +36,4 @@ class UserPostsController < ApplicationController
       .require(:post)
       .permit(:title, :text)
   end
-
 end
