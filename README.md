@@ -3,17 +3,10 @@ Simple project
 
 Third-party service badges
 
-[![Build Status](https://semaphoreapp.com/api/v1/projects/e3a4d9a1-82f7-48b0-9aa2-74eeb6878aca/298773/shields_badge.svg)](https://semaphoreapp.com/DamirMakhmutov/simpe-project)
-[![Test Coverage](https://codeclimate.com/github/DamirMakhmutov/simpe-project/badges/coverage.svg)](https://codeclimate.com/github/DamirMakhmutov/simpe-project)
-[![Code Climate](https://codeclimate.com/github/DamirMakhmutov/simpe-project/badges/gpa.svg)](https://codeclimate.com/github/DamirMakhmutov/simpe-project)
+[![Build Status](https://semaphoreapp.com/api/v1/projects/e3a4d9a1-82f7-48b0-9aa2-74eeb6878aca/298773/shields_badge.svg)](https://semaphoreapp.com/DamirMakhmutov/simple-project)
+[![Test Coverage](https://codeclimate.com/github/DamirMakhmutov/simple-project/badges/coverage.svg)](https://codeclimate.com/github/DamirMakhmutov/simple-project)
+[![Code Climate](https://codeclimate.com/github/DamirMakhmutov/simple-project/badges/gpa.svg)](https://codeclimate.com/github/DamirMakhmutov/simple-project)
 
-Project description.
--
-
-Dependencies
--
-
-Information about external dependencies (redis, mongo, postgres, etc) and how you can obtain them (via homebrew, apt-get or from ftp).
 
 Information about ruby and rails versions.
 
@@ -29,7 +22,7 @@ Quick Start
 Clone this repo:
 
 ```
-git clone https://github.com/DamirMakhmutov/simpe-project.git
+git clone https://github.com/DamirMakhmutov/simlpe-project.git
 cd simple-project
 ```
 
@@ -53,33 +46,9 @@ Scripts
 * `bin/quality` - run brakeman and rails_best_practices for the app
 * `bin/ci` - should be used in the CI to run specs
 
-Documentation & Examples
--
-
-Where is documentation and examples (e.g. `./docs`)?
-
 Continuous Integration
--
-
-CI service info and status (if available).
-Add a link to a project page on [Semaphore](http://semaphoreapp.com).
+[Semaphore](https://semaphoreapp.com/DamirMakhmutov/simple-project)
+[CodeClimate](https://codeclimate.com/github/DamirMakhmutov/simple-project).
 
 Staging
--
-
-Location and other info about staging servers.
-
-Production
--
-
-Location and other info about production servers.
-
-Third-party services
--
-
-Code Climate, etc
-
-Workflow
--
-
-Information about base branch, branch naming, commit messages, specs and pull requests. Check out our [guides](https://github.com/fs/guides/tree/master/development/maintain-existing-project/workflow).
+http://my-simple-project.herokuapp.com
