@@ -12,5 +12,5 @@ describe Post do
 
   it { should ensure_length_of(:text).is_at_least(2) }
 
-  it { expect(post.user_full_name).to eq post.user.full_name }
+  it { expect(post.full_name).to eq post.user.full_name }
 end
