@@ -1,4 +1,4 @@
 .post-description
   .author
-    = post.user_full_name
-  span.post-date = post.created_at.to_s(:ds_long)
+    = post.author
+  span = post.create_time

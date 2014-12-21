@@ -1,9 +1,7 @@
-= render 'posts/create_edit_buttons'
-
 .layout-center-wrapper
-  - if @posts.present?
+  - if posts.present?
     ul.post-list
-      - @posts.each do |post|
+      - posts.each do |post|
         li = render post
   - else
     | No matches found.

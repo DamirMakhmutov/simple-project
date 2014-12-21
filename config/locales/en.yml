@@ -83,6 +83,8 @@ en:
     navigation:
       main:
         dashboard: 'Post'
+        post: 'Posts'
+        my: 'My posts'
       user:
         sign_in: 'Sign in'
         sign_out: 'Sign out'

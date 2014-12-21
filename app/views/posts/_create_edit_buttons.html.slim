@@ -1,9 +1,0 @@
-.layout-center-wrapper.clearfix
-  .top-actions
-    - if current_user.present?
-      - if @post.try(:user_id) == current_user.try(:id)
-        = link_to 'edit', edit_post_path, class: 'btn'
-
-      .btn.btn-new
-        = link_to 'create new post', new_post_path
-

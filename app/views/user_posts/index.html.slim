@@ -1,0 +1,13 @@
+.layout-center-wrapper.clearfix
+  .top-actions
+    .btn.btn-new
+      = link_to 'create new post', new_user_post_path
+
+
+.layout-center-wrapper
+  - if posts.present?
+    ul.post-list
+      - posts.each do |post|
+        li = render 'user_posts/post', post: post
+  - else
+    | No matches found.
