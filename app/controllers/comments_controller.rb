@@ -1,12 +1,16 @@
 class CommentsController < ApplicationController
-  load_and_authorize_resource :post
-  load_and_authorize_resource :comment, through: :post
+  before_action :authenticate_user!
 
-  respond_to :html
+  expose(:post) { |d| PostPresenter.new(d) }
+  expose(:comments, ancestor: :post) { |d| d.includes(:user) }
+  expose(:comment, attributes: :comment_params)
 
   def create
-    @comment.save
-    respond_with @post
+    if comment.save
+      redirect_to post.object, notice: 'comment was created.'
+    else
+      render 'posts/show'
+    end
   end
 
   private
@@ -15,5 +19,6 @@ class CommentsController < ApplicationController
     params
       .require(:comment)
       .permit(:text, :post_id)
+      .merge(user: current_user)
   end
 end

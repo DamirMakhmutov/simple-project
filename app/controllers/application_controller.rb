@@ -14,8 +14,4 @@ class ApplicationController < ActionController::Base
   decent_configuration do
     strategy DecentExposure::StrongParametersStrategy
   end
-
-  rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url, alert: exception.message
-  end
 end

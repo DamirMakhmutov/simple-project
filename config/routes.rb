@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   root to: 'posts#index'
 
-  resources :posts do
+  resources :posts, only: %i(index show) do
+    resources :comments
+  end
+
+  resources :user_posts do
     resources :comments
   end
 end
