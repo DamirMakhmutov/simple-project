@@ -22,7 +22,7 @@ Quick Start
 Clone this repo:
 
 ```
-git clone https://github.com/DamirMakhmutov/simlpe-project.git
+git clone https://github.com/DamirMakhmutov/simple-project.git
 cd simple-project
 ```
 
