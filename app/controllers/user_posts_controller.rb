@@ -15,7 +15,7 @@ class UserPostsController < ApplicationController
 
   def create
     if post.save
-      redirect_to user_post_url(post.object), notice: 'Post was created'
+      redirect_to user_post_url(post.id), notice: 'Post was created'
     else
       render 'new'
     end
@@ -23,7 +23,7 @@ class UserPostsController < ApplicationController
 
   def update
     if post.save
-      redirect_to user_post_url(post.object), notice: 'Post was updated'
+      redirect_to user_post_url(post.id), notice: 'Post was updated'
     else
       render 'edit'
     end
